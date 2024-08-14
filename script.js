@@ -1,17 +1,17 @@
-function Book(author, title, pages, isRead = false) {
-    this.author = author;
-    this.title = title;
-    this.pages = pages;
-    this.isRead = isRead;
-}
+class Book {
+    constructor(author, title, pages, isRead = false) {
+        this.author = author;
+        this.title = title;
+        this.pages = pages;
+        this.isRead = isRead;
+    }
 
-Book.prototype.changeReadStatus = function () {
-    this.isRead = !this.isRead;
+    changeReadStatus() {
+        this.isRead = !this.isRead;
+    }
 }
-
 
 const myLibrary = [];
-
 function addBookToLibrary(book) {
   myLibrary.push(book);
 }
